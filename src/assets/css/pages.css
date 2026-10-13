@@ -387,3 +387,5 @@ h2.eyebrow { font-family: var(--font-text); font-weight: 400; line-height: 1.6; 
   color: var(--clay-dark);
   text-underline-offset: 3px;
 }
+
+.projects__soon { font-size: var(--fs-12); letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); }

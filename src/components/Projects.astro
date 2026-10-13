@@ -31,11 +31,13 @@ const projects = [
           </div>
         </article>
       ))}
-      {PROJECTS_URL && (
-        <div class="projects__more">
+      <div class="projects__more">
+        {PROJECTS_URL ? (
           <a class="btn btn-ghost" href={PROJECTS_URL}>View all &rarr;</a>
-        </div>
-      )}
+        ) : (
+          <span class="projects__soon">More projects soon</span>
+        )}
+      </div>
     </div>
   </div>
 </section>
