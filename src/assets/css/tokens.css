@@ -1,0 +1,45 @@
+:root {
+  --bg: #FAF8F3;
+  --surface: #F2EEE6;
+  --ink: #0B0D10;
+  --ink-soft: #43484F;
+  --clay: #B5573A;
+  --clay-dark: #8F4128;
+  --line: #DDD6C8;
+
+  --font-display: "Fraunces Variable", Georgia, serif;
+  --font-text: "Inter Variable", system-ui, sans-serif;
+
+  --fs-12: 0.75rem;
+  --fs-14: 0.875rem;
+  --fs-17: 1.0625rem;
+  --fs-22: 1.375rem;
+  --fs-32: clamp(1.5rem, 3vw, 2rem);
+  --fs-48: clamp(2rem, 5vw, 3rem);
+  --fs-72: clamp(2.75rem, 8vw, 4.5rem);
+  --fs-hero: clamp(3.5rem, 11vw, 11rem);
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+  --space-7: 72px;
+  --space-8: 120px;
+
+  --gutter: 16px;
+  --container: 1320px;
+  --section-y: clamp(100px, 14vw, 220px);
+  --btn-h: 48px;
+
+  --radius: 2px;
+  --radius-pill: 28px;
+
+  --dur: 400ms;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (min-width: 768px) {
+  :root { --gutter: 24px; }
+}
