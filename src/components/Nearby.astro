@@ -1,0 +1,23 @@
+---
+const places = [
+  { name: "Railway Station", distance: "[__] km" },
+  { name: "FM College", distance: "[__] km" },
+  { name: "District Hospital", distance: "[__] km" },
+  { name: "Public School", distance: "[__] km" },
+];
+---
+<section class="nearby section" id="nearby">
+  <div class="container">
+    <p class="eyebrow" data-reveal>Nearby</p>
+    <h2 class="sr-only">Nearby locations</h2>
+    <ul class="nearby__grid" data-stagger>
+      {places.map((p) => (
+        <li class="place">
+          <span class="place__name">{p.name}</span>
+          <span class="place__distance">{p.distance}</span>
+        </li>
+      ))}
+    </ul>
+    <p class="nearby__note" data-reveal>Distances to be verified before launch.</p>
+  </div>
+</section>

@@ -1,0 +1,25 @@
+---
+const views = ["Elevation", "Living room", "Bedroom", "Kitchen"];
+---
+<section class="gallery section" id="gallery">
+  <div class="container">
+    <p class="eyebrow" data-reveal>Gallery</p>
+    <h2 class="sr-only">Gallery</h2>
+    <div class="gallery__grid" data-stagger>
+      {views.map((v, i) => (
+        <figure class="gallery__card">
+          <div class="gallery__media">
+            <img
+              src={`/img/placeholder/gallery-${i + 1}.svg`}
+              alt={`Placeholder: artist's impression of the ${v.toLowerCase()} at Titli Enclave`}
+              width="1200"
+              height="900"
+              loading="lazy"
+            />
+          </div>
+          <figcaption class="gallery__label">{v}</figcaption>
+        </figure>
+      ))}
+    </div>
+  </div>
+</section>

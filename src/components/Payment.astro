@@ -1,0 +1,19 @@
+---
+import stages from "../data/payment.json";
+---
+<section class="payment section" id="payment">
+  <div class="container">
+    <p class="eyebrow" data-reveal>Payment structure</p>
+    <h2 class="sr-only">Payment structure</h2>
+    <ol class="stepper" data-stagger>
+      {stages.map((s, i) => (
+        <li class="stage">
+          <span class="stage__index">{String(i + 1).padStart(2, "0")}</span>
+          <span class="stage__name">{s.stage}</span>
+          <span class="stage__percent">{s.percent}</span>
+        </li>
+      ))}
+    </ol>
+    <p class="payment__note" data-reveal>Indicative schedule, subject to change.</p>
+  </div>
+</section>

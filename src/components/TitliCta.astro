@@ -1,0 +1,20 @@
+---
+import { UNITS_TOTAL, waLink } from "../config";
+const reserve = waLink("Hello, I'd like to reserve a 2 BHK at Titli Enclave.");
+const brochure = waLink("Hello, please send me the Titli Enclave brochure.");
+---
+<section class="cta-band" aria-labelledby="titli-cta-title">
+  <div class="container">
+    <div class="cta-band__inner">
+      <div class="cta-band__text" data-reveal>
+        <h2 id="titli-cta-title">LIMITED AVAILABILITY &ndash; {UNITS_TOTAL} APARTMENTS ONLY!</h2>
+        <p>Reserve Yours Before They're Sold Out</p>
+      </div>
+      <div class="cta-band__actions" data-reveal>
+        <a class="btn btn-primary" href={reserve} target="_blank" rel="noopener">Reserve</a>
+        <a class="btn btn-ghost-light" href={brochure} target="_blank" rel="noopener">Download Brochure</a>
+      </div>
+    </div>
+    <p class="cta-band__disclaimer">Artist's impression. Specifications subject to change.</p>
+  </div>
+</section>

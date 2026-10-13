@@ -1,0 +1,36 @@
+---
+import { waLink } from "../config";
+const reserve = waLink("Hello, I'd like to reserve a 2 BHK at Titli Enclave.");
+const enquire = waLink("Hello, I have an enquiry about Titli Enclave.");
+---
+<section class="hero hero--video" aria-label="Titli Enclave">
+  <div class="hero__media" aria-hidden="true">
+    <video
+      data-hero-video
+      muted
+      loop
+      playsinline
+      preload="none"
+      poster="/img/placeholder/titli-poster.svg"
+    >
+      <source src="/video/titli-hero.webm" type="video/webm" />
+      <source src="/video/titli-hero.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <div class="hero__overlay"></div>
+  <div class="container hero__content">
+    <h1 class="hero-title hero-title--sm">Where Every Corner Feels Like Coming Home</h1>
+    <div class="hero__actions">
+      <a class="btn btn-primary" href={reserve} target="_blank" rel="noopener">Reserve</a>
+      <a class="btn btn-ghost-light" href={enquire} target="_blank" rel="noopener">Enquire</a>
+    </div>
+    <p class="hero__offer">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
+        <path d="M3 8h18v4H3zM12 8v13M5 12v9h14v-9M12 8C12 8 10 3 7.5 4.5S9 8 12 8zM12 8c0 0 2-5 4.5-3.5S15 8 12 8z" />
+      </svg>
+      <span>Exciting discounts and gifts reserved for the first 3 bookings</span>
+    </p>
+  </div>
+  <p class="hero__caption">Artist's impression</p>
+</section>
+<script>import "../assets/js/video-hero.js";</script>

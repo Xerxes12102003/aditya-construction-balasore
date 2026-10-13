@@ -1,0 +1,21 @@
+---
+import { UNITS_TOTAL } from "../config";
+const stats = [
+  { label: "Total area", value: "1146 sq ft" },
+  { label: "Elevation", value: "Stilt + 4" },
+  { label: "Total apartments", value: `${UNITS_TOTAL} Units` },
+  { label: "Apartment configuration", value: "2 BHK" },
+];
+---
+<section class="stats" aria-label="Project at a glance">
+  <div class="container">
+    <dl class="stats__grid" data-stagger>
+      {stats.map((s) => (
+        <div class="stat">
+          <dt class="stat__label">{s.label}</dt>
+          <dd class="stat__value">{s.value}</dd>
+        </div>
+      ))}
+    </dl>
+  </div>
+</section>

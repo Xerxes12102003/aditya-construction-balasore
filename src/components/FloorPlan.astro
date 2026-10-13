@@ -1,0 +1,44 @@
+---
+import { waLink } from "../config";
+const brochure = waLink("Hello, please send me the Titli Enclave brochure.");
+const rooms = [
+  "Living / Dining",
+  "Bedroom 1",
+  "Bedroom 2",
+  "Kitchen",
+  "Bathrooms",
+  "Balcony",
+];
+---
+<section class="plan section" id="floor-plan">
+  <div class="container">
+    <p class="eyebrow" data-reveal>Floor plan</p>
+    <h2 class="sr-only">Floor plan</h2>
+    <div class="plan__grid">
+      <div class="plan__media" data-reveal>
+        <img
+          src="/img/placeholder/floor-plan.svg"
+          alt="Placeholder: 3D floor plan of a 2 BHK apartment"
+          width="1200"
+          height="900"
+          loading="lazy"
+        />
+      </div>
+      <div class="plan__info" data-reveal>
+        <table class="plan__table">
+          <caption class="sr-only">Room dimensions</caption>
+          <thead>
+            <tr><th scope="col">Room</th><th scope="col">Dimensions</th></tr>
+          </thead>
+          <tbody>
+            {rooms.map((r) => (
+              <tr><th scope="row">{r}</th><td>TBC</td></tr>
+            ))}
+          </tbody>
+        </table>
+        <p class="plan__note">Indicative dimensions, subject to change.</p>
+        <a class="btn btn-primary" href={brochure} target="_blank" rel="noopener">Download brochure now for &#8377;2500 off</a>
+      </div>
+    </div>
+  </div>
+</section>
