@@ -1,0 +1,90 @@
+.header {
+  position: sticky; top: 0; z-index: 50;
+  background: var(--bg); color: var(--ink);
+  border-bottom: 1px solid var(--line);
+  transition: background var(--dur) var(--ease), color var(--dur) var(--ease), border-color var(--dur) var(--ease);
+}
+.header[data-over-hero] { position: fixed; left: 0; right: 0; background: transparent; color: var(--bg); border-color: transparent; }
+.header[data-over-hero].is-solid { background: var(--bg); color: var(--ink); border-color: var(--line); }
+
+.header__inner { display: flex; align-items: center; justify-content: space-between; min-height: 72px; }
+.header__logo { font-family: var(--font-display); font-size: var(--fs-22); letter-spacing: -0.02em; }
+.header__nav, .header__cta { display: none; }
+
+.header__nav a {
+  position: relative; padding-block: var(--space-2);
+  font-size: var(--fs-12); font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+}
+.header__nav a::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px;
+  background: var(--clay); transform: scaleX(0); transform-origin: left;
+  transition: transform var(--dur) var(--ease);
+}
+.header__nav a:hover::after, .header__nav a[aria-current="page"]::after { transform: scaleX(1); }
+
+@media (min-width: 768px) {
+  .header__nav { display: flex; gap: var(--space-5); }
+  .header__cta { display: inline-flex; }
+}
+
+.bottom-nav {
+  position: fixed; z-index: 60;
+  left: 12px; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom));
+  max-width: 420px; margin-inline: auto;
+  display: flex; padding: 4px;
+  background: var(--bg);
+  border: 1px solid var(--line); border-radius: var(--radius-pill);
+  box-shadow: 0 8px 24px rgba(11, 13, 16, 0.08);
+}
+@supports (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px)) {
+  .bottom-nav { background: rgba(250, 248, 243, 0.8); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); }
+}
+.bottom-nav a {
+  flex: 1; min-height: 56px; border-radius: 24px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
+  color: var(--ink-soft);
+  font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  transition: color var(--dur) var(--ease), background var(--dur) var(--ease);
+}
+.bottom-nav a[aria-current="page"] { color: var(--clay-dark); background: rgba(181, 87, 58, 0.12); }
+
+body { padding-bottom: calc(56px + 32px + env(safe-area-inset-bottom) + 24px); }
+
+@media (min-width: 768px) {
+  .bottom-nav { display: none; }
+  body { padding-bottom: 0; }
+}
+
+.footer { background: var(--bg); border-top: 1px solid var(--line); padding-block: var(--space-7) var(--space-5); }
+.footer__grid { display: grid; grid-template-columns: 1fr; gap: var(--space-6) var(--gutter); }
+.footer__brand { font-family: var(--font-display); font-size: var(--fs-32); line-height: 1; margin-bottom: var(--space-3); }
+.footer__muted { color: var(--ink-soft); font-size: var(--fs-14); }
+.footer .eyebrow { margin-bottom: var(--space-3); }
+.footer__gap { margin-top: var(--space-5); }
+.footer__list { list-style: none; padding: 0; display: grid; gap: var(--space-2); font-size: var(--fs-14); }
+.footer__list a:hover { color: var(--clay-dark); }
+.footer__bar {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-3);
+  margin-top: var(--space-7); padding-top: var(--space-4); border-top: 1px solid var(--line);
+}
+.footer__social { display: flex; gap: var(--space-4); }
+.footer__social a { display: grid; place-items: center; min-width: 44px; min-height: 44px; }
+.footer__social a:hover { color: var(--clay-dark); }
+.footer__sign { margin: 0; }
+
+@media (min-width: 480px) {
+  .footer__grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  .footer__grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+.js [data-reveal] {
+  opacity: 0; transform: translateY(16px);
+  transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease);
+  transition-delay: calc(var(--i, 0) * 80ms);
+}
+.js [data-reveal].is-visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .js [data-reveal] { opacity: 1; transform: none; transition: none; }
+}

@@ -1,0 +1,32 @@
+---
+interface Props {
+  overHero?: boolean;
+}
+const { overHero = false } = Astro.props;
+const path = Astro.url.pathname.replace(/\/$/, "") || "/";
+const links = [
+  { href: "/", label: "Home" },
+  { href: "/titli-enclave", label: "Titli Enclave" },
+  { href: "/book", label: "Book Consultation" },
+];
+const showCta = path !== "/book";
+---
+<header class="header" data-over-hero={overHero ? "" : undefined}>
+  <div class="container header__inner">
+    <a class="header__logo" href="/">Aditya Construction</a>
+    <nav class="header__nav" aria-label="Primary">
+      {links.map((l) => (
+        <a href={l.href} aria-current={path === l.href ? "page" : undefined}>{l.label}</a>
+      ))}
+    </nav>
+    {showCta && <a class="btn btn-primary header__cta" href="/book">Book Consultation</a>}
+  </div>
+</header>
+<script>
+  const header = document.querySelector<HTMLElement>(".header");
+  if (header && header.hasAttribute("data-over-hero")) {
+    const update = () => header.classList.toggle("is-solid", window.scrollY > 16);
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+  }
+</script>

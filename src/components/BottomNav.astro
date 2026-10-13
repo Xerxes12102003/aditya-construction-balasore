@@ -1,0 +1,18 @@
+---
+const path = Astro.url.pathname.replace(/\/$/, "") || "/";
+const tabs = [
+  { href: "/", label: "Home", icon: "M3 11l9-8 9 8v10h-6v-6H9v6H3z" },
+  { href: "/titli-enclave", label: "Titli Enclave", icon: "M5 21V4h9v17M14 9h5v12M8 8h3M8 12h3M8 16h3" },
+  { href: "/book", label: "Book", icon: "M4 6h16v14H4zM4 10h16M8 3v4M16 3v4" },
+];
+---
+<nav class="bottom-nav" aria-label="Primary">
+  {tabs.map((t) => (
+    <a href={t.href} aria-current={path === t.href ? "page" : undefined}>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
+        <path d={t.icon} />
+      </svg>
+      <span>{t.label}</span>
+    </a>
+  ))}
+</nav>
