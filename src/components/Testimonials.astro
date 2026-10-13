@@ -1,0 +1,42 @@
+---
+const reviews = [
+  {
+    name: "Vibrant Pixels",
+    source: "Verified Google Review",
+    text: "One Stop destination for Building Plan, Design and Construction with the vastu consultancy of Mr Manmath Mishra. Kudos to their top tier service.",
+  },
+  {
+    name: "Debashis Giri",
+    source: "Homeowner \u00B7 Remuna",
+    text: "Thank you to Aditya Construction team for giving me such a wonderful house plan and always support during my home construction from planning to actual.",
+  },
+  {
+    name: "Pankaj Motwani",
+    source: "Commercial Client",
+    text: "Very happy and content to find someone professional and understanding in the city of Balasore. It was great working with the company.",
+  },
+  {
+    name: "Ranjita Patra",
+    source: "Verified Client \u00B7 Odisha",
+    text: "One of the leading engineering consultancy in Odisha. It provides best architectural and structural designing and detailing services.",
+  },
+];
+---
+<section class="testimonials section" id="testimonials">
+  <div class="container">
+    <p class="eyebrow" data-reveal>Testimonials</p>
+    <h2 class="sr-only">Verified Testimonials</h2>
+    <div class="testimonials__grid" data-stagger>
+      {reviews.map((r) => (
+        <figure class="t-card">
+          <p class="t-card__stars"><span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="sr-only">5 out of 5 stars</span></p>
+          <blockquote class="t-card__quote">&ldquo;{r.text}&rdquo;</blockquote>
+          <figcaption class="t-card__by">
+            <strong>{r.name}</strong>
+            <span>{r.source}</span>
+          </figcaption>
+        </figure>
+      ))}
+    </div>
+  </div>
+</section>

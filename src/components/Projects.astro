@@ -1,0 +1,38 @@
+---
+const projects = [
+  { title: "The Brick Courtyard Residence", type: "Residential", place: "Balasore", meta: "3,400 sq ft" },
+  { title: "Minimalist Penthouse Renovation", type: "Interiors", place: "Balasore", meta: "2,100 sq ft" },
+  { title: "Utkal Ortho & Diagnostic", type: "Commercial", place: "Station Road", meta: "4 Floors" },
+  { title: "The Terracotta House", type: "Eco-architecture", place: "Remuna", meta: "2,800 sq ft" },
+  { title: "Odia Artisanal Heritage Pavilion", type: "Civic / Eco", place: "Balasore", meta: "Regional Laterite" },
+];
+---
+<section class="projects section" id="projects">
+  <div class="container">
+    <p class="eyebrow" data-reveal>Past Projects</p>
+    <h2 class="sr-only">Past Projects</h2>
+    <div class="projects__grid" data-stagger>
+      {projects.map((p, i) => (
+        <article class="project-card">
+          <div class="project-card__media">
+            <img
+              src={`/img/placeholder/project-${i + 1}.svg`}
+              alt={`Placeholder image for ${p.title}`}
+              width="1200"
+              height="800"
+              loading="lazy"
+            />
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__type">{p.type} &bull; {p.place}</p>
+            <h3 class="project-card__title">{p.title}</h3>
+            <p class="project-card__meta">{p.meta}</p>
+          </div>
+        </article>
+      ))}
+      <div class="projects__more">
+        <a class="btn btn-ghost" href="#">View all &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>

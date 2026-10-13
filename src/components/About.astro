@@ -1,0 +1,27 @@
+---
+const people = [
+  { name: "Er. Jyotiraditya Mishra", role: "Principal Civil Engineer" },
+  { name: "Pandit. Manmath Mishra", role: "Vedic Vastu Shastra Mentor" },
+];
+---
+<section class="about section" id="about">
+  <div class="container">
+    <p class="eyebrow" data-reveal>About us</p>
+    <div class="about__grid">
+      <div data-reveal>
+        <p class="about__statement">Modern, sustainable architecture harmonized with Vedic Vastu Shastra principles under one roof.</p>
+        <div class="about__people">
+          {people.map((p) => (
+            <div>
+              <span class="about__name">{p.name}</span>
+              <span class="about__role">{p.role}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div class="about__logo" data-reveal>
+        <img src="/logo.svg" alt="Aditya Construction logo" width="400" height="400" />
+      </div>
+    </div>
+  </div>
+</section>

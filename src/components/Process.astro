@@ -1,0 +1,24 @@
+---
+const steps = [
+  { title: "Consult", text: "Site typography audit, boundary validation, and architectural brief." },
+  { title: "Plan and Vastu", text: "Directional Vastu alignment and certified municipal BRIT sanction drawings." },
+  { title: "3D and estimate", text: "Photorealistic daylight renders with an airtight, locked-price BOQ contract." },
+  { title: "Build", text: "Turnkey engineering execution with lab-certified material test protocols." },
+  { title: "Handover", text: "Complete snag clearance, occupancy certification, and key delivery." },
+];
+---
+<section class="process section" id="process">
+  <div class="container">
+    <p class="eyebrow" data-reveal>Process</p>
+    <h2 class="sr-only">Five Simple Steps</h2>
+    <ol class="process__list" data-stagger>
+      {steps.map((s, i) => (
+        <li class="step">
+          <span class="step__index">{String(i + 1).padStart(2, "0")}</span>
+          <h3 class="step__title">{s.title}</h3>
+          <p class="step__text">{s.text}</p>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>

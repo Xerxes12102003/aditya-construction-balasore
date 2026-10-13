@@ -15,7 +15,7 @@ const showCta = path !== "/book";
   <div class="container header__inner">
     <a class="header__logo" href="/">Aditya Construction</a>
     <nav class="header__nav" aria-label="Primary">
-      {links.map((l) => (
+      {links.filter((l) => !showCta || l.href !== "/book").map((l) => (
         <a href={l.href} aria-current={path === l.href ? "page" : undefined}>{l.label}</a>
       ))}
     </nav>

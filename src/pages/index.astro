@@ -1,15 +1,21 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import About from "../components/About.astro";
+import Services from "../components/Services.astro";
+import Projects from "../components/Projects.astro";
+import Process from "../components/Process.astro";
+import Team from "../components/Team.astro";
+import Testimonials from "../components/Testimonials.astro";
+import CtaBand from "../components/CtaBand.astro";
 ---
-<Layout title="Aditya Construction" description="Placeholder description.">
-  <div class="container section">
-    <h1 data-reveal>Home</h1>
-    <div style="height:120vh"></div>
-    <div class="grid" data-stagger>
-      <div style="--span:3;height:160px;background:var(--surface)"></div>
-      <div style="--span:3;height:160px;background:var(--surface)"></div>
-      <div style="--span:3;height:160px;background:var(--surface)"></div>
-      <div style="--span:3;height:160px;background:var(--surface)"></div>
-    </div>
-  </div>
+<Layout title="Aditya Construction" description="Placeholder description." overHero>
+  <Hero />
+  <About />
+  <Services />
+  <Projects />
+  <Process />
+  <Team />
+  <Testimonials />
+  <CtaBand />
 </Layout>

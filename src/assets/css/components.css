@@ -88,3 +88,5 @@ body { padding-bottom: calc(56px + 32px + env(safe-area-inset-bottom) + 24px); }
 @media (prefers-reduced-motion: reduce) {
   .js [data-reveal] { opacity: 1; transform: none; transition: none; }
 }
+
+.eyebrow { font-family: var(--font-text); font-weight: 500; line-height: 1.6; }
