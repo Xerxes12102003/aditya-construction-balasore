@@ -1,0 +1,17 @@
+---
+interface Props {
+  eyebrow?: string;
+}
+const { eyebrow = "Legal" } = Astro.props;
+---
+<section class="legal">
+  <div class="container">
+    <p class="eyebrow">{eyebrow}</p>
+    <p class="legal-banner" role="note">
+      <strong>Draft.</strong> This document is awaiting legal review and may change before launch.
+    </p>
+    <article class="legal-prose">
+      <slot />
+    </article>
+  </div>
+</section>
