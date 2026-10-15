@@ -2,20 +2,22 @@
 import { waLink } from "../config";
 const reserve = waLink("Hello, I'd like to reserve a 2 BHK at Titli Enclave.");
 const enquire = waLink("Hello, I have an enquiry about Titli Enclave.");
+const slides = [1, 2, 3].map((n) => `/img/titli/hero-${n}.webp`);
 ---
-<section class="hero hero--video" aria-label="Titli Enclave">
-  <div class="hero__media" aria-hidden="true">
-    <video
-      data-hero-video
-      muted
-      loop
-      playsinline
-      preload="none"
-      poster="/img/placeholder/titli-poster.svg"
-    >
-      <source src="/video/titli-hero.webm" type="video/webm" />
-      <source src="/video/titli-hero.mp4" type="video/mp4" />
-    </video>
+<section class="hero" data-slideshow aria-label="Titli Enclave">
+  <div class="hero__slides" aria-hidden="true">
+    {slides.map((src, i) => (
+      <div class={`hero__slide${i === 0 ? " is-active" : ""}`}>
+        <img
+          src={src}
+          alt=""
+          width="1600"
+          height="900"
+          loading={i === 0 ? "eager" : "lazy"}
+          fetchpriority={i === 0 ? "high" : "auto"}
+        />
+      </div>
+    ))}
   </div>
   <div class="hero__overlay"></div>
   <div class="container hero__content">
@@ -31,6 +33,5 @@ const enquire = waLink("Hello, I have an enquiry about Titli Enclave.");
       <span>Exciting discounts and gifts reserved for the first 3 bookings</span>
     </p>
   </div>
-  <p class="hero__caption">Artist's impression</p>
 </section>
-<script>import "../assets/js/video-hero.js";</script>
+<script>import "../assets/js/slideshow.js";</script>
