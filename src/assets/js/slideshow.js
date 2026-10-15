@@ -18,7 +18,7 @@ if (root) {
     timer = null;
   };
   const start = () => {
-    if (!timer && !userPaused && !reduce) timer = setInterval(() => show(index + 1), 5000);
+    if (!timer && !userPaused && !reduce) timer = setInterval(() => show(index + 1), 4000);
   };
 
   if (reduce) {
