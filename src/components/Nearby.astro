@@ -1,10 +1,10 @@
 ---
 const places = [
-  { name: "Padmavati Amusement Park", distance: "700 m" },
-  { name: "NH 16 ", distance: "2.6 Km" },
-  { name: "Railway Station", distance: "5 km" },
-  { name: "Market", distance: "3 km" },
-  { name: "Modern Public School", distance: "2.5 km" },
+  { name: "Padmavati Amusement Park", distance: "700 m", icon: "M12 3a8 8 0 100 16 8 8 0 000-16zM12 3v16M4 11h16M6.3 5.3l11.4 11.4M17.7 5.3L6.3 16.7M12 19l-4 3M12 19l4 3" },
+  { name: "NH 16 ", distance: "2.6 Km", icon: "M8 3L5 21M16 3l3 18M12 4v3M12 10v4M12 17v3" },
+  { name: "Railway Station", distance: "5 km", icon: "M7 3h10a2 2 0 012 2v10a2 2 0 01-2 2H7a2 2 0 01-2-2V5a2 2 0 012-2zM5 11h14M9 14h.01M15 14h.01M8 17l-2 4M16 17l2 4" },
+  { name: "Market", distance: "3 km", icon: "M4 9l1-5h14l1 5M4 9a2.5 2.5 0 005 0 2.5 2.5 0 006 0 2.5 2.5 0 005 0M5 12v8h14v-8M10 20v-5h4v5" },
+  { name: "Modern Public School", distance: "2.5 km", icon: "M2 9l10-5 10 5-10 5zM6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5M22 9v6" },
 ];
 ---
 <section class="nearby section" id="nearby">
@@ -14,6 +14,9 @@ const places = [
     <ul class="nearby__grid" data-stagger>
       {places.map((p) => (
         <li class="place">
+          <svg class="place__icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
+            <path d={p.icon} />
+          </svg>
           <span class="place__name">{p.name}</span>
           <span class="place__distance">{p.distance}</span>
         </li>

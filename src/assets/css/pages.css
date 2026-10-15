@@ -178,6 +178,7 @@ h2.eyebrow { font-family: var(--font-text); font-weight: 400; line-height: 1.6; 
 .place__name { font-family: var(--font-display); font-size: var(--fs-22); line-height: 1.2; }
 .place__distance { font-size: var(--fs-14); color: var(--ink-soft); }
 .nearby__note { margin-top: var(--space-4); font-size: var(--fs-12); color: var(--ink-soft); }
+.place__icon { color: var(--ink); margin-bottom: var(--space-3); }
 @media (min-width: 480px) { .nearby__grid { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 768px) { .nearby__grid { grid-template-columns: repeat(4, 1fr); } }
 
@@ -230,7 +231,16 @@ h2.eyebrow { font-family: var(--font-text); font-weight: 400; line-height: 1.6; 
 }
 
 .cta-band__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); }
-.cta-band__disclaimer { margin-top: var(--space-7); font-size: var(--fs-12); color: rgba(250, 248, 243, 0.6); }
+.cta-band__disclaimer {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  margin-top: var(--space-7); font-size: var(--fs-12); color: var(--bg);
+  transform-origin: left center; animation: breathe 4s ease-in-out infinite;
+}
+@keyframes breathe {
+  0%, 100% { opacity: 0.55; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.03); }
+}
+@media (prefers-reduced-motion: reduce) { .cta-band__disclaimer { animation: none; opacity: 0.8; } }
 
 .booking { display: grid; grid-template-columns: 1fr; gap: var(--space-7); padding-block: var(--space-7); }
 .booking__title { margin-bottom: var(--space-5); font-family: var(--font-text); font-size: var(--fs-12); font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; line-height: 1.4; color: var(--clay-dark); }
