@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
-  <rect width="1200" height="900" fill="#F2EEE6"/>
-  <rect x="150" y="120" width="900" height="660" fill="none" stroke="#43484F" stroke-width="4"/>
-  <path d="M600 120V480M150 480H1050M820 480V780" stroke="#43484F" stroke-width="3" fill="none"/>
-  <text x="600" y="830" text-anchor="middle" font-family="sans-serif" font-size="32" fill="#43484F">3D floor plan placeholder</text>
-</svg>
