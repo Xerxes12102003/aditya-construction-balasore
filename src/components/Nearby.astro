@@ -1,14 +1,15 @@
 ---
 const places = [
-  { name: "Railway Station", distance: "[__] km" },
-  { name: "FM College", distance: "[__] km" },
-  { name: "District Hospital", distance: "[__] km" },
-  { name: "Public School", distance: "[__] km" },
+  { name: "Padmavati Amusement Park", distance: "700 m" },
+  { name: "NH 16 ", distance: "2.6 Km" },
+  { name: "Railway Station", distance: "5 km" },
+  { name: "Market", distance: "3 km" },
+  { name: "Modern Public School", distance: "2.5 km" },
 ];
 ---
 <section class="nearby section" id="nearby">
   <div class="container">
-    <p class="eyebrow" data-reveal>Nearby</p>
+    <p class="eyebrow" data-reveal>Nearby Locations</p>
     <h2 class="sr-only">Nearby locations</h2>
     <ul class="nearby__grid" data-stagger>
       {places.map((p) => (
@@ -18,6 +19,5 @@ const places = [
         </li>
       ))}
     </ul>
-    <p class="nearby__note" data-reveal>Distances to be verified before launch.</p>
   </div>
 </section>

@@ -2,12 +2,13 @@
 import { waLink } from "../config";
 const brochure = waLink("Hello, please send me the Titli Enclave brochure.");
 const rooms = [
-  "Living / Dining",
+  "Living Cum Dining",
   "Bedroom 1",
   "Bedroom 2",
   "Kitchen",
   "Bathrooms",
   "Balcony",
+  "Puja",
 ];
 ---
 <section class="plan section" id="floor-plan">
@@ -32,12 +33,12 @@ const rooms = [
           </thead>
           <tbody>
             {rooms.map((r) => (
-              <tr><th scope="row">{r}</th><td>TBC</td></tr>
+              <tr><th scope="row">{r}</th><td>C</td></tr>
             ))}
           </tbody>
         </table>
-        <p class="plan__note">Indicative dimensions, subject to change.</p>
-        <a class="btn btn-primary" href={brochure} target="_blank" rel="noopener">Download brochure now for &#8377;2500 off</a>
+        <p class="plan__note"></p>
+        <a class="btn btn-primary" href={brochure} target="_blank" rel="noopener">Send me the brochure on WhatsApp</a>
       </div>
     </div>
   </div>

@@ -1,13 +1,13 @@
 [
-  { "stage": "Stage 01 [TBC]", "percent": "[__]%" },
-  { "stage": "Stage 02 [TBC]", "percent": "[__]%" },
-  { "stage": "Stage 03 [TBC]", "percent": "[__]%" },
-  { "stage": "Stage 04 [TBC]", "percent": "[__]%" },
-  { "stage": "Stage 05 [TBC]", "percent": "[__]%" },
-  { "stage": "Stage 06 [TBC]", "percent": "[__]%" },
-  { "stage": "Stage 07 [TBC]", "percent": "[__]%" },
-  { "stage": "Stage 08 [TBC]", "percent": "[__]%" },
-  { "stage": "Stage 09 [TBC]", "percent": "[__]%" },
-  { "stage": "Stage 10 [TBC]", "percent": "[__]%" },
-  { "stage": "Stage 11 [TBC]", "percent": "[__]%" }
+  { "stage": "On Booking With Application Form", "percent": "10%" },
+  { "stage": "On execution of agreement", "percent": "10%" },
+  { "stage": "On completion of plinth", "percent": "10%" },
+  { "stage": "On completion of ground floor roof slab", "percent": "10%" },
+  { "stage": "On completion of first floor roof slab", "percent": "10%" },
+  { "stage": "On completion of second floor roof slab", "percent": "10%" },
+  { "stage": "On completion of third floor roof slab", "percent": "10%" },
+  { "stage": "On completion of fourth floor roof slab", "percent": "10%" },
+  { "stage": "On completion of brick work & plastering", "percent": "10%" },
+  { "stage": "On completion of flooring, fixing & coloring", "percent": "5%" },
+  { "stage": "On possession", "percent": "5%" }
 ]
