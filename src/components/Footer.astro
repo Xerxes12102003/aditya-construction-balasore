@@ -1,5 +1,5 @@
 ---
-import { SOCIAL } from "../config";
+import { SOCIAL, PHONE, MAPS_URL } from "../config";
 const year = new Date().getFullYear();
 const nav = [
   { href: "/", label: "Home" },
@@ -12,13 +12,13 @@ const nav = [
     <div class="footer__grid">
       <div>
         <p class="footer__brand">Aditya Construction</p>
-        <p class="footer__muted">Architecture, interiors and civil contracting, rooted in Vastu. Balasore, Odisha.</p>
+        <p class="footer__muted">Architecture, interiors, and precision civil engineering grounded in modern aesthetics and Vastu principles in Balasore, Odisha.</p>
       </div>
       <div>
         <h2 class="eyebrow">Address</h2>
         <p class="footer__muted">Jhagadapadhi, Sunhat,<br />Balasore, Odisha 756002</p>
-        <h2 class="eyebrow footer__gap">Working Hours</h2>
-        <p class="footer__muted">Mon - Sun: 9:00 AM - 7:00 PM IST</p>
+        <p class="footer__muted footer__gap"><a href={`tel:${PHONE.tel}`}>{PHONE.display}</a></p>
+        <p class="footer__muted"><a class="footer__link" href={MAPS_URL} target="_blank" rel="noopener noreferrer"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M3 11l19-9-9 19-2-8-8-2z" /></svg>Directions on Google Maps</a></p>
       </div>
       <div>
         <h2 class="eyebrow">Index</h2>
@@ -32,22 +32,26 @@ const nav = [
           <li><a href="/privacy">Privacy Policy</a></li>
           <li><a href="/terms">Terms of Service</a></li>
         </ul>
+        <div class="footer__social footer__gap">
+          {SOCIAL.instagram && (
+            <a href={SOCIAL.instagram} aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" /></svg>
+            </a>
+          )}
+          {SOCIAL.facebook && (
+            <a href={SOCIAL.facebook} aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z" /></svg>
+            </a>
+          )}
+        </div>
       </div>
+    </div>
+    <div>
+      <h2 class="eyebrow footer__gap">Working Hours</h2>
+      <p class="footer__muted">Mon - Sun: 9:00 AM - 7:00 PM IST</p>
     </div>
     <div class="footer__bar">
       <p class="footer__muted">&copy; {year} Aditya Construction</p>
-      <div class="footer__social">
-        {SOCIAL.instagram && (
-          <a href={SOCIAL.instagram} aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" /></svg>
-        </a>
-        )}
-        {SOCIAL.facebook && (
-          <a href={SOCIAL.facebook} aria-label="Facebook" target="_blank" rel="noopener noreferrer">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z" /></svg>
-        </a>
-        )}
-      </div>
       <p class="eyebrow footer__sign">Structural Precision &bull; Odisha, IN</p>
     </div>
   </div>
